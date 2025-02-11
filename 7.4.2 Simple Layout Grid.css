@@ -1,0 +1,33 @@
+.big-grid {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Tạo ra 2 cột với tỷ lệ 30% và 70% */
+    grid-template-rows: auto auto auto; /* Tạo ra 3 hàng với chiều cao tự động */
+    height: calc(100% - 40px);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.header { grid-column: 1 / span 2; grid-row: 1;/* Header chiếm hết chiều rộng của cả 2 cột */
+    height: 10vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(3, 232, 205);
+}
+.sidebar { grid-column: 1; grid-row: 2; /* Sidebar chiếm cột 1, hàng 2 */
+    height: 80vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(130, 228, 3);
+}
+.content { grid-column: 2; grid-row: 2; /* Content chiếm cột 2, hàng 2 */
+    height: 80vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(238, 202, 1);
+}
+.footer { grid-column: 1 / span 2; grid-row: 3; /* Footer chiếm hết chiều rộng của cả 2 cột */
+    height: 10vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(239, 88, 0);
+}

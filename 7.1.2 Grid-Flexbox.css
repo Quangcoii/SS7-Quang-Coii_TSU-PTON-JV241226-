@@ -1,0 +1,17 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.centered{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #da3c26;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

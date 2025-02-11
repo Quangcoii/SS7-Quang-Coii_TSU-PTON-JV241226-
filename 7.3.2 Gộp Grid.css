@@ -1,0 +1,27 @@
+.all-box {
+    display: grid; /* Biến phần tử thành một container grid */
+    grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột với kích thước bằng nhau */
+    grid-template-rows: auto auto; /* Tạo 2 hàng với chiều cao tự động */
+    grid-template-areas:
+        "a b c d" /* Hàng đầu tiên với 4 phần tử a, b, c, d */
+        "e e f g"; /* Hàng thứ hai với phần tử e chiếm 2 ô, và phần tử f, g mỗi phần tử chiếm 1 ô còn lại */
+    background-color: aliceblue; /* Màu nền của container */
+    gap: 5px; /* Khoảng cách giữa các phần tử trong grid */
+}
+
+.box1 { grid-area: a; } /* Gán phần tử div vào khu vực a */
+.box2 { grid-area: b; } /* Gán phần tử div vào khu vực b */
+.box3 { grid-area: c; } /* Gán phần tử div vào khu vực c */
+.box4 { grid-area: d; } /* Gán phần tử div vào khu vực d */
+.box5 { grid-area: e; } /* Gán phần tử div vào khu vực e */
+.box6 { grid-area: e; } /* Gán phần tử div vào khu vực e trùng với box 5 để gộp cả 2 */
+.box7 { grid-area: f; } /* Gán phần tử div vào khu vực f */
+.box8 { grid-area: g; } /* Gán phần tử div vào khu vực g */
+
+.all-box > div {
+    background-color: #da3c26; /* Màu nền của các phần tử con */
+    color:white;
+    text-align: center; /* Căn chỉnh văn bản vào giữa theo chiều ngang */
+    font-size: 30px; /* Kích thước chữ */
+    padding: 20px; /* Khoảng cách đệm bên trong các phần tử con */
+}
