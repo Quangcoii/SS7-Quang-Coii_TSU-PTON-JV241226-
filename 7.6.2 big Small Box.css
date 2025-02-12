@@ -1,0 +1,23 @@
+*{font-family: Arial, Helvetica, sans-serif;}
+.all-box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap: 10px;
+    color: white;
+}
+.all-box>div{
+    background-color: #da3c26;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.big1{
+    grid-column:1/span 2;
+    grid-row:1/span 2;
+}
+
+.big2{
+    grid-column:1/ span 2;
+    grid-row:3/span 2;
+}

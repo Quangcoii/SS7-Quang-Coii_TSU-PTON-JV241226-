@@ -1,0 +1,63 @@
+/* Quangcoii-11/2/2025 */
+*{  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(4,1fr);
+    grid-template-areas:
+    "a a a"
+    "a a a"
+    "b c d"
+    "e f g";
+    gap: 10px;
+    padding: 10px;
+}
+[class*="grid-item"]{
+    grid-auto-flow: dense;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    line-height: 30px;
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.grid-item-1{
+    grid-area: a ;
+    background-image: url(https://i.gaw.to/content/photos/62/93/629342-les-commandes-du-tesla-cybertruck-s-ouvrent-au-canada-et-c-est-pas-donne.jpeg);
+    line-height: 50px;}
+h2{
+    font-size: 40px;
+}
+.grid-item-2{
+    grid-area: b ;
+    background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Main-Hero-Desktop-NA.png);}
+.grid-item-3{
+    grid-area: c ;
+    background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-2-Desktop-NA.png);}
+.grid-item-4{
+    grid-area: d ;
+    background-image: url(https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_Component_M3_Desktop.jpg);}
+.grid-item-5{
+    grid-area: e ;
+    background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Cybertruck-Desktop-v3.png)}
+.grid-item-6{
+    grid-area: f ;
+    background-image: url(https://console.kr-asia.com/wp-content/uploads/2023/12/Tesla-Cybertruck-1.jpg);
+    justify-content: center;
+    align-items: center;}
+button{
+    width: 110px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+}
+.grid-item-7{
+    grid-area: g ;
+    background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-US.png)}

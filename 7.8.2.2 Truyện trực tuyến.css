@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #352e2e;
+}
+.all-content{
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1efef;
+}
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Thiết lập các cột của grid. 
+     - `repeat(auto-fit, minmax(200px, 1fr))` tạo ra các cột có kích thước tối thiểu là 200px và có thể mở rộng để lấp đầy không gian còn lại.
+     - `auto-fit` đảm bảo rằng các cột sẽ tự động vừa với không gian có sẵn. Nếu không đủ không gian, nó sẽ tự động giảm số lượng cột.
+     - `minmax(200px, 1fr)` đảm bảo rằng các cột sẽ có kích thước tối thiểu là 200px và tối đa là 1fr (fraction unit), nghĩa là các cột sẽ chia đều không gian còn lại. */
+    grid-auto-rows: minmax(100px, auto); 
+    gap: 20px;
+    grid-auto-flow: row dense; 
+    /* Điều chỉnh cách các item tự động sắp xếp khi không đủ không gian.
+     - `grid-auto-flow: row dense` sắp xếp các item theo hàng và cho phép chúng xuống dòng khi không đủ không gian.
+     - `dense` giúp giảm thiểu khoảng trống bằng cách sắp xếp lại các item sao cho khít nhau nhất có thể. */
+}
+  
+[class*="grid-item"]{
+    width: auto;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+button{
+    width: 90px;
+    padding: 10px;
+    background-color: #ff3d2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}[class*="grid-item"] h2{
+    font-size: 20px;
+    height: 50px;
+    overflow: hidden;
+}
+[class*="avatar"]{
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+    background-size: cover;
+}
+.avatar-1{
+    background-image: url(https://media.themoviedb.org/t/p/w500/bAl4rX85qVbGeVslvQqFRDHsQ6X.jpg);
+}
+.avatar-2{
+    background-image: url(https://upload.wikimedia.org/wikipedia/vi/8/80/Heaven_Sword_%26_Dragon_Sabre.jpg);
+}
+.avatar-3{
+    background-image: url(https://upload.wikimedia.org/wikipedia/vi/f/fb/Poster_Ti%E1%BA%BFu_ng%E1%BA%A1o_giang_h%E1%BB%93_%28phim_2013%29.jpg);
+}
+.avatar-4{
+    background-image: url(https://danviet.mediacdn.vn/upload/3-2015/images/2015-09-11/1441964397-thien-long-13a.jpg);
+}
+.avatar-5{
+    background-image: url(https://cliphubs.com/data/images/phim/xem-tron-bo-phim-thuy-hu-2011-thuyet-minh-long-tieng.jpg);
+    background-position: center;
+}
+.avatar-6{
+    background-image: url(https://static2.vieon.vn/vieplay-image/thumbnail_big_v4/2021/09/28/zr5mz886_1920x1080-anhhungxadieu_1267_712.webp);
+    background-position: center;
+}
